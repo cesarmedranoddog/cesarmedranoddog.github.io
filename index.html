@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Botones Simples</title>
+    <title>Diferentes Tipos de Botones</title>
     <style>
         body {
             font-family: Arial, sans-serif;
@@ -21,45 +21,65 @@
             gap: 10px;
         }
 
-        button {
+        .primary-button {
+            background-color: #007bff;
+            color: white;
             padding: 10px 20px;
             font-size: 16px;
+            text-align: center;
             border-radius: 5px;
-            border: none;
             cursor: pointer;
         }
 
-        .primary {
-            background-color: #007bff;
-            color: white;
-        }
-
-        .secondary {
+        .secondary-link {
+            display: inline-block;
             background-color: #6c757d;
             color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            text-decoration: none;
+            text-align: center;
         }
 
-        .success {
+        .success-div {
             background-color: #28a745;
             color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border-radius: 5px;
+            text-align: center;
+            cursor: pointer;
         }
 
-        .danger {
+        .danger-input {
             background-color: #dc3545;
             color: white;
+            padding: 10px 20px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
         }
 
-        button:hover {
+        .primary-button:hover, .secondary-link:hover, .success-div:hover, .danger-input:hover {
             opacity: 0.8;
         }
     </style>
 </head>
 <body>
     <div class="button-container">
-        <button class="primary">Primary Button</button>
-        <button class="secondary">Secondary Button</button>
-        <button class="success">Success Button</button>
-        <button class="danger">Danger Button</button>
+        <!-- Botón tradicional con <button> -->
+        <button class="primary-button">Primary Button</button>
+
+        <!-- Enlace (<a>) con estilo de botón -->
+        <a href="#" class="secondary-link">Secondary Link</a>
+
+        <!-- Div estilizado como botón -->
+        <div class="success-div" onclick="alert('Success Div Clicked!')">Success Div</div>
+
+        <!-- Input de tipo submit estilizado como botón -->
+        <input type="submit" value="Danger Input" class="danger-input">
     </div>
 </body>
 </html>
